@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+	<form>
+		<ul>
+			{% for book in books %}
+   				<li>{{ book.title }}</li>
+			{% endfor %}
+		</ul>
+		<p>Tytuł książki:</p>
+		<label for="title"></label>
+		<input type="text" id="title" name="title"><br>
+		<br>
+		<p>Autor książki:</p>
+		<label for="author"></label>
+		<input type="text" id="author" name="author"><br>
+		<br>
+		<p>Opis książki</p>
+		<label for="description"></label>
+		<textarea cols=80 rows=4 type="textbox" id="description" name="description" placeholder="Opis książki..."></textarea><br>
+		<br>
+		<p>Rok wydania książki:</p>
+		<label for"publication_date"></label>
+		<input type="text" id="publication_date" name="publication_date"><br>
+		<br>
+		<input type="submit" value="Wyślij">
+	</form>
+</body>
+</html>
